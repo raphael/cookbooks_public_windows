@@ -1,0 +1,73 @@
+{
+    "providing": {
+    },
+    "description": "ActiveDirectory recipes",
+    "replacing": {
+    },
+    "groupings": {
+    },
+    "attributes": {
+      "ad/new_username": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "app_ad::add_user",
+          "app_ad::join"
+        ],
+        "display_name": "New Active Directory domain account user",
+        "description": "New Domain user name"
+      },
+      "ad/domain": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "app_ad::add_user",
+          "app_ad::join"
+        ],
+        "display_name": "Domain name",
+        "description": "Active Directory domain name"
+      },
+      "ad/new_password": {
+        "required": "required",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+          "app_ad::add_user",
+          "app_ad::join"
+        ],
+        "display_name": "New Active Directory domain account password",
+        "description": "New Domain user password"
+      }
+    },
+    "long_description": "",
+    "recipes": {
+      "app_ad::join": "Creates a new Active Directory user account, can be run anywhere",
+      "app_ad::add_user": "Creates a new Active Directory user account, must be run on Domain Controller"
+    },
+    "recommendations": {
+    },
+    "dependencies": {
+    },
+    "maintainer": "Your Name",
+    "suggestions": {
+    },
+    "platforms": {
+    },
+    "name": "app_ad",
+    "version": "0.0.1",
+    "license": "Apache v2.0",
+    "maintainer_email": "youremail@example.com",
+    "conflicting": {
+    }
+  }

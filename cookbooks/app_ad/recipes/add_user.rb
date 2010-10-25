@@ -4,6 +4,7 @@ log "\n\n" + "-" * 80 + "\n"
   log " " * 10 + "-" * 50
   log "#{k.inspect}: #{v.inspect}"
 end
+log @node['ad'].inspect
 #app_ad_active_directory do
   #domain   @node['ad']['domain']
   #username @node['ad']['new_username']

@@ -2,7 +2,7 @@
 log "\n\n" + "-" * 80 + "\n"
 @node.each do |k, v|
   log " " * 10 + "-" * 50
-  log "#{k}: #{v.inspect}"
+  log "#{k.inspect}: #{v.inspect}"
 end
 #app_ad_active_directory do
   #domain   @node['ad']['domain']

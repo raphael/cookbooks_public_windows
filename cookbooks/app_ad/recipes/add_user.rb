@@ -5,10 +5,10 @@
   #log "#{k.inspect}: #{v.inspect}"
 #end
 log "DOMAIN: " + @node['ad']['domain'].inspect
-#app_ad_active_directory do
-  #domain   @node['ad']['domain']
-  #username @node['ad']['new_username']
-  #password @node['ad']['new_password']
-  #action :add_user
-#end
+app_ad_active_directory do
+  domain   @node['ad']['domain']
+  username @node['ad']['new_username']
+  password @node['ad']['new_password']
+  action :add_user
+end
 #log "\n" + "-" * 80 + "\n\n"

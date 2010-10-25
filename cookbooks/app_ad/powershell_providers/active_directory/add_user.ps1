@@ -2,8 +2,8 @@
 
 # 1. Retrieve inputs
 $Domain   = Get-ChefNode ad, domain
-$UserName = Get-ChefNode ad, username
-$Password = Get-ChefNode ad, password
+$UserName = Get-ChefNode ad, new_username
+$Password = Get-ChefNode ad, new_password
 
 # 2. Create user
 $Domain = $Domain.Split('.')

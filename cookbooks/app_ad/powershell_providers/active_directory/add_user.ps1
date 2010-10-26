@@ -18,7 +18,6 @@ $newUser.SetInfo()
 
 # 3. Add user to 'Remote Desktop Users' group
 $remoteUsers = [ADSI] "LDAP://CN=Remote Desktop Users, CN=Builtin, DC=$Domain"
-$members = $remoteUsers.member
-$remoteUsers.member = $members + $newUser.distinguishedName
-$remoteUsers.SetInfo()
+$remoteUsers.add($newUser.psbase.Path)
+
 

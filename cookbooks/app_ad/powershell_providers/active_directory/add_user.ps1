@@ -21,4 +21,3 @@ $newUser.SetInfo()
 $remoteUsers = [ADSI] "LDAP://CN=Remote Desktop Users, CN=Builtin, DC=$Domain"
 $remoteUsers.add($newUser.psbase.Path)
 
-

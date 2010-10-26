@@ -8,7 +8,8 @@ password = node[:ad][:new_password]
 # 2. Send remote recipe
 remote_recipe 'join domain' do
   recipe 'app_ad::add_user'
-  attributes({ :ad => { :domain       => domain, 
+  attributes :remote_recipe => {
+               :ad => { :domain       => domain, 
                         :new_username => username,
                         :new_password => password } })
   recipients_tags 'provides:ad_role=controller'

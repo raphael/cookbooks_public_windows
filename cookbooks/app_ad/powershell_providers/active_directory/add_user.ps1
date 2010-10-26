@@ -9,9 +9,16 @@ $Password = Get-ChefNode ad, new_password
 $Domain = $Domain.Split('.')
 $Domain = [string]::join(", DC=", $Domain)
 $container = [ADSI] "LDAP://CN=Users,DC=$Domain"
-$newUser = $container.Create("User", "cn=" + $UserName)
+$newUser = $container.Create("User", "CN=" + $UserName)
 $newUser.Put("sAMAccountName", $UserName)
 $newUser.SetInfo()
+$newUser.SetPassword($Password)
 $newUser.psbase.InvokeSet('AccountDisabled', $false)
 $newUser.SetInfo()
-$newUser.SetPassword($Password)
+
+# 3. Add user to 'Remote Desktop Users' group
+$remoteUsers = [ADSI] "LDAP://CN=Remote Desktop Users, CN=Builtin, DC=$Domain"
+$members = $remoteUsers.member
+$remoteUsers.member = $members + $newUser.distinguishedName
+$remoteUsers.SetInfo()
+

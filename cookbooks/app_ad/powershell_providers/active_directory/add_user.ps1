@@ -6,6 +6,7 @@ $UserName = Get-ChefNode ad, new_username
 $Password = Get-ChefNode ad, new_password
 
 # 2. Create user
+Write-Host "Creating Account for User " + $userName
 $Domain = $Domain.Split('.')
 $Domain = [string]::join(", DC=", $Domain)
 $container = [ADSI] "LDAP://CN=Users,DC=$Domain"

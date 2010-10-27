@@ -11,6 +11,6 @@ remote_recipe 'join domain' do
   attributes :remote_recipe => {
                :ad => { :domain       => domain, 
                         :new_username => username,
-                        :new_password => password } })
+                        :new_password => password } }
   recipients_tags 'provides:ad_role=controller'
 end

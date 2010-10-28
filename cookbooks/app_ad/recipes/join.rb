@@ -18,12 +18,12 @@ remote_recipe 'add user' do
 end
 
 # 3. Set DNS Server to be DC
-dns_server domain do
+app_ad_dns_server domain do
   action :set
 end
 
 # 4. Join domain
-active_directory domain do
+app_ad_active_directory domain do
   admin_username admin_username
   admin_password admin_password
   action :join

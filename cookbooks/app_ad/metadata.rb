@@ -12,13 +12,13 @@ attribute "ad/domain",
   :required     => "required"
 
 attribute "ad/user_username",
-  :display_name => "Domain username",
+  :display_name => "Application username",
   :description  => "New Active Directory domain account username",
   :recipes      => ["app_ad::add_user", "app_ad::join"],
   :required     => "required"
 
 attribute "ad/user_password",
-  :display_name => "Domain user password",
+  :display_name => "Application password",
   :description  => "New Active Directory domain account password",
   :recipes      => ["app_ad::add_user", "app_ad::join"],
   :required     => "required"

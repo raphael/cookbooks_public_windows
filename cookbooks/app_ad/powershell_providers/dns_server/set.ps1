@@ -1,12 +1,13 @@
-$name = Get-ChefNode ad, domain
-$ip = [System.Net.Dns]::GetHostByName($name).AddressList[0].IPAddressToString
+$Domain = Get-ChefNode ad, domain
+Write-Host "Using domain $Domain as DNS"
 
-Write-Host "Now using $ip for DNS resolution"
+$Ip = [System.Net.Dns]::GetHostByName($Domain).AddressList[0].IPAddressToString
+Write-Host "Now using $Ip for DNS resolution"
 
 $NICs = Get-WmiObject -Class Win32_NetworkAdapterConfiguration -ComputerName $env:ComputerName -Filter "IPEnabled=TRUE"
 
 foreach($NIC in $NICs) {
-    $NIC.SetDNSServerSearchOrder($ip)
+    $NIC.SetDNSServerSearchOrder($Ip)
     $NIC.SetDynamicDNSRegistration("TRUE")
   }
 }

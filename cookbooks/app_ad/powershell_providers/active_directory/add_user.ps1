@@ -2,8 +2,8 @@
 
 # 1. Retrieve inputs
 $Domain   = Get-ChefNode ad, domain
-$UserName = Get-ChefNode ad, new_username
-$Password = Get-ChefNode ad, new_password
+$UserName = Get-ChefNode ad, user_username
+$Password = Get-ChefNode ad, user_password
 
 # 2. Create user
 Write-Host "Creating Account for User $userName"

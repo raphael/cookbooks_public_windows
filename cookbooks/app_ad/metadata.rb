@@ -24,8 +24,8 @@ attribute "ad/user_password",
   :required     => "required"
 
 attribute "ad/admin_username",
-  :display_name => "Username of domain account used to add computers to domain",
-  :description  => "Domain administrator username",
+  :display_name => "Domain administrator username",
+  :description  => "Username of domain account used to add computers to domain",
   :recipes      => ["app_ad::join"],
   :required     => "required"
 

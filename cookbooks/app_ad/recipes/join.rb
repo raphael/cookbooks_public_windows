@@ -18,7 +18,8 @@ remote_recipe 'add user' do
 end
 
 # 3. Set DNS Server to be DC
-app_ad_dns_server domain do
+app_ad_dns_server 'domain' do
+  domain domain
   action :set
 end
 

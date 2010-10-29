@@ -24,7 +24,7 @@ end
 
 # 4. Join domain
 app_ad_active_directory 'domain' do
-  domain         domain
+  domain domain
   admin_username admin_username
   admin_password admin_password
   action :join

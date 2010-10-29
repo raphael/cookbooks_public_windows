@@ -1,7 +1,10 @@
 # app_add::add_user
-app_ad_active_directory 'directory' do
-  domain        node['ad']['domain']
-  user_username node['ad']['user_username']
-  user_password node['ad']['user_password']
+domain   = node[:ad][:domain]
+username = node[:ad][:user_username]
+password = node[:ad][:user_password]
+
+app_ad_active_directory domain do
+  user_username username
+  user_password password
   action :add_user
 end

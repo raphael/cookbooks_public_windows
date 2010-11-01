@@ -7,6 +7,12 @@ password = node[:ad][:user_password]
 admin_username = node[:ad][:admin_username]
 admin_password = node[:ad][:admin_password]
 
+log "domain #{domain}"
+log "username #{username}"
+log "password #{password}"
+log "admin_username #{admin_username}"
+log "admin_password #{admin_password}"
+
 # 2. Send remote recipe to add user
 remote_recipe 'add user' do
   recipe 'app_ad::add_user'

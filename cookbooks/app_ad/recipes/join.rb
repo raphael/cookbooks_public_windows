@@ -28,9 +28,9 @@ app_ad_dns_server domain do
   action :set
 end
 
-# 4. Join domain
-app_ad_active_directory domain do
-  admin_username admin_username
-  admin_password admin_password
-  action :join
-end
+## 4. Join domain
+#app_ad_active_directory domain do
+  #admin_username admin_username
+  #admin_password admin_password
+  #action :join
+#end

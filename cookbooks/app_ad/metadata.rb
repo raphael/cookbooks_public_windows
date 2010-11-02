@@ -5,6 +5,7 @@ recipe "app_ad::add_user", "Creates a new Active Directory user account, must be
 recipe "app_ad::remote_add_user", "Creates a new Active Directory user account, can be run anywhere"
 recipe "app_ad::join", "Join instance to domain"
 recipe "add_ad::set_dns_server", "Set DNS server entries"
+recipe "add_ad::setup_controller", "Sets up domain controller tag"
 
 attribute "ad/domain",
   :display_name => "Domain name",

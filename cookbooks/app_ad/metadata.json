@@ -79,8 +79,8 @@
     },
     "long_description": "",
     "recipes": {
-      "app_ad::join": "Creates a new Active Directory user account, can be run anywhere",
-      "app_ad::remote_add_user": "Adds a user to the AD controller from a remote instance",
+      "app_ad::join": "Join instance to domain",
+      "app_ad::remote_add_user": "Creates a new Active Directory user account, can be run anywhere",
       "app_ad::add_user": "Creates a new Active Directory user account, must be run on Domain Controller",
       "add_ad::set_dns_server": "Set DNS server entries"
     },

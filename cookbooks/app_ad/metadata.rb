@@ -2,8 +2,8 @@ description      "ActiveDirectory recipes"
 version          "0.0.1"
 
 recipe "app_ad::add_user", "Creates a new Active Directory user account, must be run on Domain Controller"
-recipe "app_ad::remote_add_user", "Adds a user to the AD controller from a remote instance"
-recipe "app_ad::join", "Creates a new Active Directory user account, can be run anywhere"
+recipe "app_ad::remote_add_user", "Creates a new Active Directory user account, can be run anywhere"
+recipe "app_ad::join", "Join instance to domain"
 recipe "add_ad::set_dns_server", "Set DNS server entries"
 
 attribute "ad/domain",

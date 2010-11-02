@@ -4,8 +4,8 @@ version          "0.0.1"
 recipe "app_ad::add_user", "Creates a new Active Directory user account, must be run on Domain Controller"
 recipe "app_ad::remote_add_user", "Creates a new Active Directory user account, can be run anywhere"
 recipe "app_ad::join", "Join instance to domain"
-recipe "add_ad::set_dns_server", "Set DNS server entries"
-recipe "add_ad::setup_controller", "Sets up domain controller tag"
+recipe "app_ad::set_dns_server", "Set DNS server entries"
+recipe "app_ad::setup_controller", "Sets up domain controller tag"
 
 attribute "ad/domain",
   :display_name => "Domain name",

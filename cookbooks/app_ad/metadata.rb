@@ -2,25 +2,26 @@ description      "ActiveDirectory recipes"
 version          "0.0.1"
 
 recipe "app_ad::add_user", "Creates a new Active Directory user account, must be run on Domain Controller"
+recipe "app_ad::remote_add_user", "Adds a user to the AD controller from a remote instance"
 recipe "app_ad::join", "Creates a new Active Directory user account, can be run anywhere"
 recipe "add_ad::set_dns_server", "Set DNS server entries"
 
 attribute "ad/domain",
   :display_name => "Domain name",
   :description  => "Active Directory domain name",
-  :recipes      => ["app_ad::add_user", "app_ad::join"],
+  :recipes      => ["app_ad::add_user", "app_ad::remote_add_user", "app_ad::join"],
   :required     => "required"
 
 attribute "ad/user_username",
   :display_name => "Application username",
   :description  => "New Active Directory domain account username",
-  :recipes      => ["app_ad::add_user", "app_ad::join"],
+  :recipes      => ["app_ad::add_user", "app_ad::remote_add_user"],
   :required     => "required"
 
 attribute "ad/user_password",
   :display_name => "Application password",
   :description  => "New Active Directory domain account password",
-  :recipes      => ["app_ad::add_user", "app_ad::join"],
+  :recipes      => ["app_ad::add_user", "app_ad::remote_add_user"],
   :required     => "required"
 
 attribute "ad/admin_username",

@@ -29,7 +29,7 @@
         "type": "string",
         "recipes": [
           "app_ad::add_user",
-          "app_ad::join"
+          "app_ad::remote_add_user"
         ],
         "display_name": "Application password",
         "description": "New Active Directory domain account password"
@@ -43,6 +43,7 @@
         "type": "string",
         "recipes": [
           "app_ad::add_user",
+          "app_ad::remote_add_user",
           "app_ad::join"
         ],
         "display_name": "Domain name",
@@ -70,7 +71,7 @@
         "type": "string",
         "recipes": [
           "app_ad::add_user",
-          "app_ad::join"
+          "app_ad::remote_add_user"
         ],
         "display_name": "Application username",
         "description": "New Active Directory domain account username"
@@ -79,6 +80,7 @@
     "long_description": "",
     "recipes": {
       "app_ad::join": "Creates a new Active Directory user account, can be run anywhere",
+      "app_ad::remote_add_user": "Adds a user to the AD controller from a remote instance",
       "app_ad::add_user": "Creates a new Active Directory user account, must be run on Domain Controller",
       "add_ad::set_dns_server": "Set DNS server entries"
     },

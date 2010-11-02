@@ -4,7 +4,7 @@ username = node[:ad][:user_username]
 password = node[:ad][:user_password]
 
 log "domain:   #{domain}"
-log "username: #{user_username}"
+log "username: #{username}"
 
 app_ad_active_directory domain do
   user_username username

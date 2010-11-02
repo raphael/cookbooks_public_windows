@@ -79,11 +79,11 @@
     },
     "long_description": "",
     "recipes": {
+      "app_ad::setup_controller": "Sets up domain controller tag",
       "app_ad::join": "Join instance to domain",
       "app_ad::remote_add_user": "Creates a new Active Directory user account, can be run anywhere",
       "app_ad::add_user": "Creates a new Active Directory user account, must be run on Domain Controller",
-      "add_ad::set_dns_server": "Set DNS server entries",
-      "add_ad::setup_controller": "Sets up domain controller tag"
+      "app_ad::set_dns_server": "Set DNS server entries"
     },
     "recommendations": {
     },

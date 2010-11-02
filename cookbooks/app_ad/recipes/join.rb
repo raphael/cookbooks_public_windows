@@ -5,8 +5,8 @@ domain   = node[:ad][:domain]
 admin_username = node[:ad][:admin_username]
 admin_password = node[:ad][:admin_password]
 
-log "domain #{domain}"
-log "admin_username #{admin_username}"
+log "domain:         #{domain}"
+log "admin username: #{admin_username}"
 
 # 2. Set DNS Server to be DC
 app_ad_dns_server domain do
